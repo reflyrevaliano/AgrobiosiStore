@@ -1,18 +1,16 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from 'expo-router';
+import { CartProvider } from '../context/CartContext';
+import { COLORS } from '../constants/styles';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
-
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <CartProvider>
+      <Stack screenOptions={{ headerStyle: { backgroundColor: COLORS.greenDark }, headerTintColor: '#FFFFFF', headerTitleStyle: { fontWeight: '700' }, contentStyle: { backgroundColor: COLORS.cream } }}>
+        <Stack.Screen name="index" options={{ title: 'AgrobioStore', headerShown: false }} />
+        <Stack.Screen name="products/[id]" options={{ title: 'Detail Produk' }} />
+        <Stack.Screen name="cart" options={{ title: 'Keranjang Belanja' }} />
+        <Stack.Screen name="checkout/index" options={{ title: 'Konfirmasi Pesanan' }} />
+      </Stack>
+    </CartProvider>
   );
 }
