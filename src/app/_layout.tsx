@@ -10,6 +10,7 @@ export default function RootLayout() {
         <Stack.Screen name="products/[id]" options={{ title: 'Detail Produk' }} />
         <Stack.Screen name="cart" options={{ title: 'Keranjang Belanja' }} />
         <Stack.Screen name="checkout/index" options={{ title: 'Konfirmasi Pesanan' }} />
+        <Stack.Screen name="weather" options={{ title: 'Info Cuaca Pertanian' }} />
       </Stack>
     </CartProvider>
   );

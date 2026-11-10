@@ -57,6 +57,17 @@ export default function HomeScreen() {
         </Pressable>
       </View>
 
+      <View style={[styles.panel, { marginTop: 0, marginBottom: 20 }]}>
+        <View style={styles.row}>
+          <Text style={{ color: COLORS.text, fontSize: 16, fontWeight: '800' }}>🌦️ Info Cuaca Pertanian</Text>
+          <Text style={{ color: COLORS.green, fontSize: 10, fontWeight: '800' }}>API EKSTERNAL</Text>
+        </View>
+        <Text style={[styles.muted, { marginTop: 6 }]}>Lihat suhu, kelembapan, angin, dan peluang hujan di wilayah Malang melalui data cuaca online.</Text>
+        <Pressable onPress={() => router.push('/weather')} style={styles.primaryButton}>
+          <Text style={styles.primaryButtonText}>Lihat informasi cuaca</Text>
+        </Pressable>
+      </View>
+
       <Text style={styles.sectionTitle}>Cari kebutuhanmu</Text>
       <TextInput value={search} onChangeText={setSearch} placeholder="Cari benih, pupuk, alat..." placeholderTextColor="#87938A" style={styles.search} />
       <View style={styles.categoryRow}>
