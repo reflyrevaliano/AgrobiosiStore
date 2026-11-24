@@ -1,8 +1,8 @@
 import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import { formatRupiah } from '../constants/products';
-import { COLORS, styles } from '../constants/styles';
-import { useCart } from '../context/CartContext';
+import { formatRupiah } from '@/constants/products';
+import { COLORS, styles } from '@/constants/styles';
+import { useCart } from '@/context/CartContext';
 
 export default function CartScreen() {
   const { items, changeQuantity, removeItem, totalPrice, totalItems } = useCart();

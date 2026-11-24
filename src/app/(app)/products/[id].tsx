@@ -1,8 +1,8 @@
 import { useLocalSearchParams, router } from 'expo-router';
 import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
-import { PRODUCTS, formatRupiah } from '../../constants/products';
-import { COLORS, styles } from '../../constants/styles';
-import { useCart } from '../../context/CartContext';
+import { PRODUCTS, formatRupiah } from '@/constants/products';
+import { COLORS, styles } from '@/constants/styles';
+import { useCart } from '@/context/CartContext';
 
 export default function ProductDetailScreen() {
   const params = useLocalSearchParams<{ id: string }>();

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
-import { COLORS, styles } from '../constants/styles';
-import { getWeatherWithPromise } from '../services/weatherService';
-import { WeatherInfo } from '../types/weather';
+import { COLORS, styles } from '@/constants/styles';
+import { getWeatherWithPromise } from '@/services/weatherService';
+import { WeatherInfo } from '@/types/weather';
 
 export default function WeatherScreen() {
   const [weather, setWeather] = useState<WeatherInfo | null>(null);
